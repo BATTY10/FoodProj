@@ -4,7 +4,6 @@ import WebView from "react-native-webview";
 import { Platform } from "react-native";
 
 import { Text } from "../typography/text.components";
-import { restaurantsRequest } from "../../services/restaurants/restaurants.service";
 
 const CompactImage = styled.Image`
   border-radius: 10px;
@@ -12,7 +11,7 @@ const CompactImage = styled.Image`
   height: 100px;
 `;
 
-const Compactwebview = styled(WebView)`
+const CompactWebview = styled(WebView)`
   border-radius: 10px;
   width: 120px;
   height: 100px;
@@ -27,7 +26,7 @@ const Item = styled.View`
 const isAndroid = Platform.OS === "android";
 
 export const CompactRestaurantInfo = ({ restaurant }) => {
-  const Image = isAndroid ? Compactwebview : CompactImage;
+  const Image = isAndroid ? CompactWebview : CompactImage;
 
   return (
     <Item>
